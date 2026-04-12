@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plummer Transport</title>
+<style>
+body { font-family: Arial; margin:0; background:#0f172a; color:white; }
+header { padding:20px; text-align:center; background:#020617; }
+h1 { margin:0; }
+section { padding:40px; max-width:1000px; margin:auto; }
+.services { display:grid; grid-template-columns:1fr 1fr 1fr; gap:20px; }
+.card { background:#1e293b; padding:20px; border-radius:10px; }
+form input, form textarea {
+  width:100%; padding:10px; margin:10px 0; border-radius:5px; border:none;
+}
+button {
+  background:#38bdf8; border:none; padding:12px; width:100%;
+  border-radius:5px; cursor:pointer;
+}
+footer { text-align:center; padding:20px; background:#020617; }
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Plummer Transport</h1>
+<p>Reliable. Fast. Nationwide Delivery.</p>
+</header>
+
+<section>
+<h2>Our Services</h2>
+<div class="services">
+<div class="card">
+<h3>Courier Delivery</h3>
+<p>Fast local and regional delivery services.</p>
+</div>
+<div class="card">
+<h3>OTR Transport</h3>
+<p>Long-distance, over-the-road freight solutions.</p>
+</div>
+<div class="card">
+<h3>Medical Delivery</h3>
+<p>Secure, time-sensitive medical courier services.</p>
+</div>
+</div>
+</section>
+
+<section>
+<h2>Request a Quote</h2>
+<form>
+<input type="text" placeholder="Your Name" required>
+<input type="email" placeholder="Email" required>
+<input type="text" placeholder="Pickup Location" required>
+<input type="text" placeholder="Dropoff Location" required>
+<textarea placeholder="Details"></textarea>
+<button type="submit">Submit Request</button>
+</form>
+</section>
+
+<section>
+<h2>Contact</h2>
+<p>Email: info@plummertransport.com</p>
+<p>Phone: (555) 555-5555</p>
+</section>
+
+<footer>
+<p>© 2026 Plummer Transport</p>
+</footer>
+
+</body>
+</html>
