@@ -1,143 +1,362 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Plummer Transport</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Plummer Transport | Courier, Medical & OTR Delivery</title>
 
 <style>
-body { font-family: Arial; margin:0; background:#f5f7fa; }
+* { box-sizing: border-box; }
+body { margin:0; font-family: Arial, sans-serif; background:#f4f6f8; color:#111827; }
+a { text-decoration:none; }
 
-/* HERO */
-.hero {
-  background: linear-gradient(135deg,#0a0a0a,#1f2937);
-  color:#fff;
-  text-align:center;
-  padding:80px 20px;
+header {
+  background:#07111f;
+  color:white;
+  padding:18px 7%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
 }
-.hero h1 { font-size:40px; margin-bottom:10px; }
-.hero p { font-size:18px; margin:10px 0; }
-.btn {
-  display:inline-block;
-  padding:14px 25px;
-  margin:10px;
+
+.logo {
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.logo-mark {
+  width:52px;
+  height:52px;
+  border-radius:50%;
   background:#2563eb;
-  color:#fff;
-  text-decoration:none;
-  border-radius:8px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:26px;
+  font-weight:900;
+  color:white;
+  box-shadow:0 0 20px rgba(37,99,235,.5);
+}
+
+.logo h1 {
+  margin:0;
+  font-size:25px;
+  letter-spacing:1px;
+}
+
+.logo p {
+  margin:2px 0 0;
+  color:#cbd5e1;
+  font-size:13px;
+}
+
+.header-contact {
+  text-align:right;
+  font-weight:bold;
+  font-size:14px;
+}
+
+.hero {
+  background:linear-gradient(135deg,#07111f,#111827,#1e3a8a);
+  color:white;
+  padding:95px 7%;
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  gap:40px;
+  align-items:center;
+}
+
+.hero h2 {
+  font-size:54px;
+  line-height:1.05;
+  margin:0 0 20px;
+}
+
+.hero p {
+  font-size:20px;
+  color:#dbeafe;
+  line-height:1.6;
+}
+
+.badge {
+  display:inline-block;
+  background:rgba(255,255,255,.12);
+  border:1px solid rgba(255,255,255,.25);
+  padding:10px 16px;
+  border-radius:999px;
+  margin-bottom:20px;
   font-weight:bold;
 }
 
-/* SECTION */
-section { max-width:1100px; margin:auto; padding:60px 20px; }
-
-h2 { margin-bottom:20px; }
-
-/* CARDS */
-.card {
-  background:#fff;
-  padding:25px;
-  margin:15px 0;
-  border-radius:12px;
-  box-shadow:0 4px 12px rgba(0,0,0,0.08);
+.btn {
+  display:inline-block;
+  background:#2563eb;
+  color:white;
+  padding:15px 26px;
+  border-radius:10px;
+  margin:8px 8px 8px 0;
+  font-weight:bold;
+  border:none;
+  cursor:pointer;
 }
 
-/* GRID */
-.grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; }
+.btn-dark {
+  background:white;
+  color:#07111f;
+}
 
-/* FORM */
-form { background:#fff; padding:25px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.08); }
+.hero-card {
+  background:rgba(255,255,255,.1);
+  border:1px solid rgba(255,255,255,.2);
+  padding:32px;
+  border-radius:24px;
+  box-shadow:0 20px 60px rgba(0,0,0,.35);
+}
+
+.hero-card h3 {
+  font-size:28px;
+  margin-top:0;
+}
+
+section {
+  max-width:1150px;
+  margin:auto;
+  padding:70px 20px;
+}
+
+.section-title {
+  text-align:center;
+  margin-bottom:40px;
+}
+
+.section-title h2 {
+  font-size:36px;
+  margin-bottom:10px;
+}
+
+.section-title p {
+  color:#6b7280;
+  font-size:18px;
+}
+
+.grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:24px;
+}
+
+.card {
+  background:white;
+  padding:30px;
+  border-radius:18px;
+  box-shadow:0 10px 25px rgba(0,0,0,.08);
+  border:1px solid #e5e7eb;
+}
+
+.card h3 {
+  font-size:24px;
+  margin-top:0;
+}
+
+.card p, .card li {
+  color:#4b5563;
+  line-height:1.6;
+}
+
+.card ul {
+  padding-left:18px;
+}
+
+.highlight {
+  background:#07111f;
+  color:white;
+  border-radius:24px;
+  padding:45px;
+  text-align:center;
+}
+
+.highlight p {
+  color:#cbd5e1;
+  font-size:18px;
+}
+
+form {
+  background:white;
+  padding:35px;
+  border-radius:22px;
+  box-shadow:0 12px 35px rgba(0,0,0,.1);
+}
+
 input, textarea, select {
   width:100%;
-  padding:12px;
+  padding:15px;
   margin:10px 0;
-  border:1px solid #ccc;
-  border-radius:6px;
+  border:1px solid #d1d5db;
+  border-radius:10px;
+  font-size:16px;
 }
 
-/* FOOTER */
 footer {
-  background:#0a0a0a;
-  color:#fff;
+  background:#07111f;
+  color:white;
   text-align:center;
-  padding:30px 20px;
+  padding:45px 20px;
+}
+
+footer p {
+  color:#cbd5e1;
+}
+
+@media(max-width:800px) {
+  .hero { grid-template-columns:1fr; padding:70px 25px; }
+  .hero h2 { font-size:38px; }
+  .header-contact { text-align:left; margin-top:15px; }
 }
 </style>
-
 </head>
 
 <body>
 
+<header>
+  <div class="logo">
+    <div class="logo-mark">PT</div>
+    <div>
+      <h1>PLUMMER TRANSPORT</h1>
+      <p>Courier • Medical • OTR Delivery</p>
+    </div>
+  </div>
+
+  <div class="header-contact">
+    <div><a style="color:white;" href="tel:4704674576">(470) 467-4576</a></div>
+    <div><a style="color:#93c5fd;" href="mailto:BOOKNOW@PLUMMERTRANSPORT.COM">BOOKNOW@PLUMMERTRANSPORT.COM</a></div>
+  </div>
+</header>
+
 <div class="hero">
-  <h1>PLUMMER TRANSPORT</h1>
-  <p>Fast. Secure. On-Time Delivery — Every Mile.</p>
-  <p>(470) 467-4576 | BOOKNOW@PLUMMERTRANSPORT.COM</p>
-  <a href="#quote" class="btn">Get a Quote</a>
-  <a href="tel:4704674576" class="btn">Call Now</a>
+  <div>
+    <div class="badge">Georgia-Based Delivery Service</div>
+    <h2>Fast. Secure. On-Time Delivery — Every Mile.</h2>
+    <p>Professional courier, medical, and over-the-road transport services across Metro Atlanta, Georgia, and beyond.</p>
+    <a href="#quote" class="btn">Get a Quote</a>
+    <a href="tel:4704674576" class="btn btn-dark">Call Now</a>
+  </div>
+
+  <div class="hero-card">
+    <h3>Reliable Delivery When It Matters Most</h3>
+    <p>From time-sensitive packages to medical deliveries and long-distance transport, Plummer Transport handles every shipment with professionalism, care, and clear communication.</p>
+    <p>✅ Same-Day Options</p>
+    <p>✅ Medical Delivery Support</p>
+    <p>✅ Regional & OTR Routes</p>
+  </div>
 </div>
 
 <section>
-  <h2>Our Services</h2>
+  <div class="section-title">
+    <h2>Our Services</h2>
+    <p>Professional delivery solutions built around speed, safety, and reliability.</p>
+  </div>
+
   <div class="grid">
     <div class="card">
       <h3>Courier Services</h3>
-      <p>Same-day delivery, documents, and small freight.</p>
+      <p>Fast and dependable delivery for businesses and individuals.</p>
+      <ul>
+        <li>Same-day delivery</li>
+        <li>Documents and parcels</li>
+        <li>Scheduled route delivery</li>
+        <li>Small freight</li>
+      </ul>
     </div>
+
     <div class="card">
       <h3>Medical Delivery</h3>
-      <p>Lab specimens, pharmacy, and medical equipment delivery.</p>
+      <p>Secure medical-related delivery support with careful handling.</p>
+      <ul>
+        <li>Lab specimens</li>
+        <li>Pharmacy deliveries</li>
+        <li>Medical equipment</li>
+        <li>HIPAA-aware handling</li>
+      </ul>
     </div>
+
     <div class="card">
       <h3>OTR Transport</h3>
-      <p>Long-distance freight and scheduled transport.</p>
+      <p>Long-distance freight and scheduled transport services.</p>
+      <ul>
+        <li>Regional delivery</li>
+        <li>Nationwide routes</li>
+        <li>Dedicated transport</li>
+        <li>Time-sensitive freight</li>
+      </ul>
     </div>
   </div>
 </section>
 
 <section>
-  <h2>Why Choose Us</h2>
+  <div class="highlight">
+    <h2>Need Delivery ASAP?</h2>
+    <p>Call now or request a quote in seconds. We respond quickly and help you choose the right delivery option.</p>
+    <a href="tel:4704674576" class="btn">Call (470) 467-4576</a>
+    <a href="#quote" class="btn btn-dark">Request Quote</a>
+  </div>
+</section>
+
+<section>
+  <div class="section-title">
+    <h2>Why Choose Plummer Transport?</h2>
+  </div>
+
   <div class="grid">
-    <div class="card">Reliable & On-Time</div>
-    <div class="card">Professional Handling</div>
-    <div class="card">Fast Response</div>
-    <div class="card">Metro Atlanta Coverage</div>
+    <div class="card"><h3>Reliable & On-Time</h3><p>We understand that timing matters.</p></div>
+    <div class="card"><h3>Professional Handling</h3><p>Your delivery is handled with care from pickup to drop-off.</p></div>
+    <div class="card"><h3>Fast Response</h3><p>Quick communication and simple quote requests.</p></div>
+    <div class="card"><h3>Metro Atlanta Coverage</h3><p>Serving Atlanta, Alpharetta, Decatur, Lithonia, and surrounding areas.</p></div>
   </div>
 </section>
 
 <section id="quote">
-  <h2>Request a Quote</h2>
+  <div class="section-title">
+    <h2>Request a Quote</h2>
+    <p>Tell us what you need delivered and we’ll respond quickly.</p>
+  </div>
 
   <form action="https://formsubmit.co/BOOKNOW@PLUMMERTRANSPORT.COM" method="POST">
+    <input type="hidden" name="_subject" value="New Quote Request from PlummerTransport.com">
+    <input type="hidden" name="_captcha" value="false">
+
     <input type="text" name="name" placeholder="Full Name" required>
-    <input type="text" name="phone" placeholder="Phone Number" required>
+    <input type="tel" name="phone" placeholder="Phone Number" required>
     <input type="email" name="email" placeholder="Email Address" required>
     <input type="text" name="pickup" placeholder="Pickup Location">
     <input type="text" name="dropoff" placeholder="Drop-off Location">
 
-```
-<select name="service">
-  <option>Courier</option>
-  <option>Medical</option>
-  <option>OTR</option>
-</select>
+    <select name="service" required>
+      <option value="">Select Service Type</option>
+      <option>Courier Services</option>
+      <option>Medical Delivery</option>
+      <option>OTR Transport</option>
+    </select>
 
-<textarea name="details" placeholder="Details"></textarea>
+    <textarea name="details" rows="5" placeholder="Delivery details, timing, package type, or special instructions"></textarea>
 
-<button class="btn" type="submit">Submit Request</button>
-```
-
+    <button class="btn" type="submit">Submit Quote Request</button>
   </form>
 </section>
 
 <section>
-  <h2>Service Area</h2>
-  <p>Atlanta, Alpharetta, Decatur, Lithonia, and surrounding areas.</p>
+  <div class="section-title">
+    <h2>Service Area</h2>
+    <p>Atlanta • Alpharetta • Decatur • Lithonia • Metro Atlanta • Georgia • Regional & Nationwide Routes</p>
+  </div>
 </section>
 
 <footer>
-  <p>Plummer Transport</p>
-  <p>9925 Haynes Bridge Rd Ste 200 #813, Alpharetta, GA</p>
+  <h2>PLUMMER TRANSPORT</h2>
+  <p>9925 Haynes Bridge Rd, Ste 200 #813, Alpharetta, GA 30022</p>
+  <p><a style="color:#93c5fd;" href="tel:4704674576">(470) 467-4576</a> | <a style="color:#93c5fd;" href="mailto:BOOKNOW@PLUMMERTRANSPORT.COM">BOOKNOW@PLUMMERTRANSPORT.COM</a></p>
+  <p>© 2026 Plummer Transport. All rights reserved.</p>
 </footer>
 
 </body>
