@@ -2,49 +2,110 @@
 
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Plummer Transport</title>
-  <style>
-    body { font-family: Arial; margin: 0; background:#f5f5f5; }
-    header { background:#111; color:#fff; padding:20px; text-align:center; }
-    section { padding:40px 20px; max-width:1000px; margin:auto; }
-    h1, h2 { margin-bottom:15px; }
-    .btn { display:inline-block; padding:12px 20px; margin:10px; background:#007bff; color:#fff; text-decoration:none; border-radius:5px; }
-    .card { background:#fff; padding:20px; margin:15px 0; border-radius:10px; }
-    footer { background:#111; color:#fff; text-align:center; padding:20px; }
-    input, textarea, select { width:100%; padding:10px; margin:10px 0; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plummer Transport</title>
+
+<style>
+body { font-family: Arial; margin:0; background:#f5f7fa; }
+
+/* HERO */
+.hero {
+  background: linear-gradient(135deg,#0a0a0a,#1f2937);
+  color:#fff;
+  text-align:center;
+  padding:80px 20px;
+}
+.hero h1 { font-size:40px; margin-bottom:10px; }
+.hero p { font-size:18px; margin:10px 0; }
+.btn {
+  display:inline-block;
+  padding:14px 25px;
+  margin:10px;
+  background:#2563eb;
+  color:#fff;
+  text-decoration:none;
+  border-radius:8px;
+  font-weight:bold;
+}
+
+/* SECTION */
+section { max-width:1100px; margin:auto; padding:60px 20px; }
+
+h2 { margin-bottom:20px; }
+
+/* CARDS */
+.card {
+  background:#fff;
+  padding:25px;
+  margin:15px 0;
+  border-radius:12px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* GRID */
+.grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; }
+
+/* FORM */
+form { background:#fff; padding:25px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.08); }
+input, textarea, select {
+  width:100%;
+  padding:12px;
+  margin:10px 0;
+  border:1px solid #ccc;
+  border-radius:6px;
+}
+
+/* FOOTER */
+footer {
+  background:#0a0a0a;
+  color:#fff;
+  text-align:center;
+  padding:30px 20px;
+}
+</style>
+
 </head>
 
 <body>
 
-<header>
+<div class="hero">
   <h1>PLUMMER TRANSPORT</h1>
   <p>Fast. Secure. On-Time Delivery — Every Mile.</p>
   <p>(470) 467-4576 | BOOKNOW@PLUMMERTRANSPORT.COM</p>
-</header>
+  <a href="#quote" class="btn">Get a Quote</a>
+  <a href="tel:4704674576" class="btn">Call Now</a>
+</div>
 
 <section>
   <h2>Our Services</h2>
-
-  <div class="card">
-    <h3>Courier Services</h3>
-    <p>Same-day delivery, documents, and small freight.</p>
-  </div>
-
-  <div class="card">
-    <h3>Medical Delivery</h3>
-    <p>Lab specimens, pharmacy, and medical equipment delivery.</p>
-  </div>
-
-  <div class="card">
-    <h3>OTR Transport</h3>
-    <p>Long-distance freight and scheduled transport.</p>
+  <div class="grid">
+    <div class="card">
+      <h3>Courier Services</h3>
+      <p>Same-day delivery, documents, and small freight.</p>
+    </div>
+    <div class="card">
+      <h3>Medical Delivery</h3>
+      <p>Lab specimens, pharmacy, and medical equipment delivery.</p>
+    </div>
+    <div class="card">
+      <h3>OTR Transport</h3>
+      <p>Long-distance freight and scheduled transport.</p>
+    </div>
   </div>
 </section>
 
 <section>
+  <h2>Why Choose Us</h2>
+  <div class="grid">
+    <div class="card">Reliable & On-Time</div>
+    <div class="card">Professional Handling</div>
+    <div class="card">Fast Response</div>
+    <div class="card">Metro Atlanta Coverage</div>
+  </div>
+</section>
+
+<section id="quote">
   <h2>Request a Quote</h2>
 
   <form action="https://formsubmit.co/BOOKNOW@PLUMMERTRANSPORT.COM" method="POST">
@@ -63,7 +124,7 @@
 
 <textarea name="details" placeholder="Details"></textarea>
 
-<button class="btn" type="submit">Submit</button>
+<button class="btn" type="submit">Submit Request</button>
 ```
 
   </form>
