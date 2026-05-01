@@ -1,80 +1,83 @@
-
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Plummer Transport</title>
-
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #0f172a;
-      color: white;
-      text-align: center;
-    }
-
-    header {
-      background: #1e293b;
-      padding: 20px;
-      font-size: 24px;
-      font-weight: bold;
-    }
-
-    section {
-      padding: 40px 20px;
-    }
-
-    .btn {
-      background: #22c55e;
-      color: white;
-      padding: 12px 20px;
-      border: none;
-      cursor: pointer;
-      margin-top: 20px;
-      font-size: 16px;
-    }
-
-    .btn:hover {
-      background: #16a34a;
-    }
+    body { font-family: Arial; margin: 0; background:#f5f5f5; }
+    header { background:#111; color:#fff; padding:20px; text-align:center; }
+    section { padding:40px 20px; max-width:1000px; margin:auto; }
+    h1, h2 { margin-bottom:15px; }
+    .btn { display:inline-block; padding:12px 20px; margin:10px; background:#007bff; color:#fff; text-decoration:none; border-radius:5px; }
+    .card { background:#fff; padding:20px; margin:15px 0; border-radius:10px; }
+    footer { background:#111; color:#fff; text-align:center; padding:20px; }
+    input, textarea, select { width:100%; padding:10px; margin:10px 0; }
   </style>
 </head>
 
 <body>
 
-  <header>
-    Plummer Transport
-  </header>
+<header>
+  <h1>PLUMMER TRANSPORT</h1>
+  <p>Fast. Secure. On-Time Delivery — Every Mile.</p>
+  <p>(470) 467-4576 | BOOKNOW@PLUMMERTRANSPORT.COM</p>
+</header>
 
-  <section>
-    <h1>Reliable Courier & Logistics Services</h1>
-    <p>Courier • OTR • Medical Delivery</p>
+<section>
+  <h2>Our Services</h2>
 
-   <a class="btn" href="mailto:BOOKNOW@PLUMMERTRANSPORT.COM">Request a Quote</a>
-  </section>
+  <div class="card">
+    <h3>Courier Services</h3>
+    <p>Same-day delivery, documents, and small freight.</p>
+  </div>
 
-  <section>
-    <h2>Our Services</h2>
-    <p>Courier Delivery</p>
-    <p>OTR (Over-the-Road) Transport</p>
-    <p>Medical Courier Services</p>
-  </section>
+  <div class="card">
+    <h3>Medical Delivery</h3>
+    <p>Lab specimens, pharmacy, and medical equipment delivery.</p>
+  </div>
 
-  <section>
-    <h2>Contact Us</h2>
+  <div class="card">
+    <h3>OTR Transport</h3>
+    <p>Long-distance freight and scheduled transport.</p>
+  </div>
+</section>
 
-    <p><strong>Email:</strong> BOOKNOW@PLUMMERTRANSPORT.COM</p>
+<section>
+  <h2>Request a Quote</h2>
 
-    <p><strong>Phone:</strong> (470) 467-4576</p>
+  <form action="https://formsubmit.co/BOOKNOW@PLUMMERTRANSPORT.COM" method="POST">
+    <input type="text" name="name" placeholder="Full Name" required>
+    <input type="text" name="phone" placeholder="Phone Number" required>
+    <input type="email" name="email" placeholder="Email Address" required>
+    <input type="text" name="pickup" placeholder="Pickup Location">
+    <input type="text" name="dropoff" placeholder="Drop-off Location">
 
-    <p><strong>Address:</strong><br>
-      9925 Haynes Bridge Rd<br>
-      Ste 200 #813<br>
-      Alpharetta, GA 30022
-    </p>
-  </section>
+```
+<select name="service">
+  <option>Courier</option>
+  <option>Medical</option>
+  <option>OTR</option>
+</select>
+
+<textarea name="details" placeholder="Details"></textarea>
+
+<button class="btn" type="submit">Submit</button>
+```
+
+  </form>
+</section>
+
+<section>
+  <h2>Service Area</h2>
+  <p>Atlanta, Alpharetta, Decatur, Lithonia, and surrounding areas.</p>
+</section>
+
+<footer>
+  <p>Plummer Transport</p>
+  <p>9925 Haynes Bridge Rd Ste 200 #813, Alpharetta, GA</p>
+</footer>
 
 </body>
 </html>
