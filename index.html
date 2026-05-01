@@ -4,10 +4,18 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Plummer Transport | Courier, Medical & OTR Delivery</title>
+<link rel="icon" type="image/png" href="logo.png">
 
 <style>
 * { box-sizing: border-box; }
-body { margin:0; font-family: Arial, sans-serif; background:#f4f6f8; color:#111827; }
+
+body {
+  margin:0;
+  font-family: Arial, sans-serif;
+  background:#f4f6f8;
+  color:#111827;
+}
+
 a { text-decoration:none; }
 
 header {
@@ -29,8 +37,10 @@ header {
 .logo img {
   width:78px;
   height:auto;
-  border-radius:14px;
-  box-shadow:0 0 22px rgba(37,99,235,.45);
+  border-radius:12px;
+  background:white;
+  padding:6px;
+  box-shadow:0 0 25px rgba(37,99,235,0.6);
 }
 
 .logo h1 {
@@ -175,6 +185,25 @@ section {
   font-size:18px;
 }
 
+.review {
+  font-size:17px;
+  line-height:1.6;
+}
+
+.stars {
+  color:#f59e0b;
+  font-size:22px;
+  margin-bottom:12px;
+}
+
+.fast-response {
+  text-align:center;
+  font-weight:bold;
+  color:#2563eb;
+  font-size:18px;
+  margin-bottom:20px;
+}
+
 form {
   background:white;
   padding:35px;
@@ -191,6 +220,13 @@ input, textarea, select {
   font-size:16px;
 }
 
+.map-box {
+  border-radius:18px;
+  overflow:hidden;
+  box-shadow:0 12px 35px rgba(0,0,0,.12);
+  border:1px solid #e5e7eb;
+}
+
 footer {
   background:#07111f;
   color:white;
@@ -203,10 +239,23 @@ footer p {
 }
 
 @media(max-width:800px) {
-  .hero { grid-template-columns:1fr; padding:70px 25px; }
-  .hero h2 { font-size:38px; }
-  .header-contact { text-align:left; margin-top:15px; }
-  .logo img { width:68px; }
+  .hero {
+    grid-template-columns:1fr;
+    padding:70px 25px;
+  }
+
+  .hero h2 {
+    font-size:38px;
+  }
+
+  .header-contact {
+    text-align:left;
+    margin-top:15px;
+  }
+
+  .logo img {
+    width:68px;
+  }
 }
 </style>
 </head>
@@ -310,11 +359,37 @@ footer p {
   </div>
 </section>
 
+<section>
+  <div class="section-title">
+    <h2>What Clients Say</h2>
+    <p>Professional delivery service built on reliability and communication.</p>
+  </div>
+
+  <div class="grid">
+    <div class="card review">
+      <div class="stars">★★★★★</div>
+      “Fast, reliable, and professional service. Communication was clear from pickup to delivery.”
+    </div>
+
+    <div class="card review">
+      <div class="stars">★★★★★</div>
+      “On-time delivery with great attention to detail. I would definitely use Plummer Transport again.”
+    </div>
+
+    <div class="card review">
+      <div class="stars">★★★★★</div>
+      “Dependable transport service with quick response times and professional handling.”
+    </div>
+  </div>
+</section>
+
 <section id="quote">
   <div class="section-title">
     <h2>Request a Quote</h2>
     <p>Tell us what you need delivered and we’ll respond quickly.</p>
   </div>
+
+  <p class="fast-response">⚡ Get a fast response within minutes</p>
 
   <form action="https://formsubmit.co/BOOKNOW@PLUMMERTRANSPORT.COM" method="POST">
     <input type="hidden" name="_subject" value="New Quote Request from PlummerTransport.com">
@@ -343,6 +418,24 @@ footer p {
   <div class="section-title">
     <h2>Service Area</h2>
     <p>Atlanta • Alpharetta • Decatur • Lithonia • Metro Atlanta • Georgia • Regional & Nationwide Routes</p>
+  </div>
+</section>
+
+<section>
+  <div class="section-title">
+    <h2>Our Location</h2>
+    <p>9925 Haynes Bridge Rd, Ste 200 #813, Alpharetta, GA 30022</p>
+  </div>
+
+  <div class="map-box">
+    <iframe 
+      src="https://www.google.com/maps?q=9925+Haynes+Bridge+Rd+Alpharetta+GA+30022&output=embed"
+      width="100%" 
+      height="320" 
+      style="border:0;" 
+      allowfullscreen="" 
+      loading="lazy">
+    </iframe>
   </div>
 </section>
 
